@@ -44,7 +44,9 @@ public class Empresa {
         int id = sc.nextInt();
         //faz a busca do id digitado e joga o resultado na variavel emp
         Funcionario emp = list.stream().filter(x-> x.getId()==id).findFirst().orElse(null);
-                
+        System.out.println("");
+        
+        
         if(emp == null){
             System.out.println("This id does not exist!");
         }else{
@@ -52,6 +54,8 @@ public class Empresa {
             double porcentagem = sc.nextDouble();
             emp.aumento(porcentagem);
         }
+        
+
         
         System.out.println();
         System.out.println("List of Empoyees");
@@ -69,3 +73,4 @@ public class Empresa {
 	}
     
 }
+
